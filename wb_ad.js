@@ -25,6 +25,7 @@ const path20 = "/video/tiny_stream_video_list";
 const path21 = "/photo/info";
 const path22 = "/live/media_homelist";
 const path23 = "/remind/unread_count";
+const path24 = "/statuses/container_timeline";
 
 const url = $request.url;
 let body = $response.body;
@@ -35,7 +36,8 @@ if (
     url.indexOf(path10) != -1 ||
     url.indexOf(path15) != -1 ||
     url.indexOf(path17) != -1 ||
-    url.indexOf(path20) != -1
+    url.indexOf(path20) != -1 ||
+    url.indexOf(path24)
 ) {
     let obj = JSON.parse(body);
     if (obj.statuses) obj.statuses = filter_timeline_statuses(obj.statuses);
