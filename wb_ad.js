@@ -37,7 +37,7 @@ if (
     url.indexOf(path15) != -1 ||
     url.indexOf(path17) != -1 ||
     url.indexOf(path20) != -1 ||
-    url.indexOf(path24)
+    url.indexOf(path24) != -1
 ) {
     let obj = JSON.parse(body);
     if (obj.statuses) obj.statuses = filter_timeline_statuses(obj.statuses);
